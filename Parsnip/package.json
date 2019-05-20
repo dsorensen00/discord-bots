@@ -1,0 +1,28 @@
+{
+  "name": "parsnip-discord-bot",
+  "version": "1.0.0",
+  "description": "Parsnip is our Discord bot which supports some user-friendly commands to answer our most frequently-asked questions.",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^11.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SaladTechnologies/discord-bots.git"
+  },
+  "keywords": [
+    "salad",
+    "discord",
+    "bot"
+  ],
+  "author": "Quantum; Tim Clancy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SaladTechnologies/discord-bots/issues"
+  },
+  "homepage": "https://github.com/SaladTechnologies/discord-bots#readme"
+}
