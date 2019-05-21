@@ -115,6 +115,10 @@ bot.on("message", async message => {
         message.channel.send("Thank you for using Salad and our services!");
       })
   };
+
+  if (cmd === `${prefix}logs`){
+    message.channel.send("To find your Salad logs, first naviage to `%appdata%`. Then you want to go to roaming and then into the `Salad` folder. Your logs will be under the file `log.log` which looks like a .txt file!");
+  }
 });
 
 bot.login(botconfig.token);
