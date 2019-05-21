@@ -108,13 +108,18 @@ bot.on("message", async message => {
       .addField("__**#faq**__", "Look for solutions to a problem you might have!")
       .addField("__**#findgpu**__", "If you don't know your GPU's model, use this command to see a method on how to find that out")
       .addField("__**#supportedgpus**__", "View what GPUs Salad supports")
-      .addField("__**#redeem**__", "Information on redeeming your gift cards!");
+      .addField("__**#redeem**__", "Information on redeeming your gift cards!")
+      .addField("__**#logs**__", "Instructions on finding your log file!");
 
     return message.channel.send(help)
       .then(msg => {
         message.channel.send("Thank you for using Salad and our services!");
       })
   };
+
+  if (cmd === `${prefix}logs`){
+    message.channel.send("To find your Salad logs, first navigate to `%appdata%`. Then you want to go to `roaming` and then into the `Salad` folder. Your logs will be under the file `log.log` which looks like a .txt file!");
+  }
 });
 
 bot.login(botconfig.token);
