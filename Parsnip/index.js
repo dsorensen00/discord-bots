@@ -108,7 +108,8 @@ bot.on("message", async message => {
       .addField("__**#faq**__", "Look for solutions to a problem you might have!")
       .addField("__**#findgpu**__", "If you don't know your GPU's model, use this command to see a method on how to find that out")
       .addField("__**#supportedgpus**__", "View what GPUs Salad supports")
-      .addField("__**#redeem**__", "Information on redeeming your gift cards!");
+      .addField("__**#redeem**__", "Information on redeeming your gift cards!")
+      .addField("__**#logs**__", "Instructions on finding your log file!");
 
     return message.channel.send(help)
       .then(msg => {
