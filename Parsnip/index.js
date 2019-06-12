@@ -26,8 +26,8 @@ bot.on("message", async message => {
     let supportedgpus = new Discord.RichEmbed()
       .setDescription("__**SUPPORTED GPUs**__")
       .setColor("#50f442")
-      .addField("__**AMD**__", "AMD Radeon 470 Graphics\nAMD Radeon RX 580 Series\nAMD Radeon RX 570 Series\nAMD Radeon VII 16GB\nAMD Radeon Vega 64\nAMD Radeon Vega 56")
-      .addField("__**NVIDIA**__", "GeForce GTX 1050 Ti\nGeForce GTX 1060 6GB\nGeForce GTX 1060 with Max-Q Design\nGeForce GTX 1070\nGeForce GTX 1070 Ti\nGeForce GTX 1080\nGeForce GTX 1080 Ti\nGeForce GTX 970\nGeForce GTX 980 Ti\nGeForce RTX 2080\nGeForce Tesla M60 16GB\nGeForce RTX 2080 Ti\nGeForce RTX 2070\nGeForce RTX 2070 Ti\nGeForce GTX 2060\nTITAN V\nTITAN XP\nGeForce GTX 980\nQuadro P5000");
+      .addField("__**AMD**__", "AMD R9 390\nAMD Radeon 470 Graphics\nRadeon RX 480\nAMD Radeon RX 570 Series\nAMD Radeon RX 580 Series\nRadeon RX 590 Series\nAMD Radeon VII 16GB\nAMD Radeon Vega 64\nAMD Radeon Vega 56\nRadeon Vega Frontier Edition")
+      .addField("__**NVIDIA**__", "GeForce GTX 1050 Ti\nGeForce GTX 1060 6GB\nGeForce GTX 1060 with Max-Q Design\nGeForce GTX 1660\nGeForce GTX 1660 Ti\nGeForce GTX 1070\nGeForce GTX 1070 Ti\nGeForce GTX 1080\nGeForce GTX 1080 Ti\nGeForce GTX 970\nGeForce GTX 980 Ti\nGeForce RTX 2080\nGeForce Tesla M60 16GB\nGeForce RTX 2080 Ti\nGeForce RTX 2070\nGeForce RTX 2070 Ti\nGeForce GTX 2060\nTITAN V\nTITAN XP\nGeForce GTX 980\nQuadro P4000\nNVIDIA Quadro P5000");
 
       return message.channel.send(supportedgpus);
     }
