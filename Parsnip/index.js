@@ -56,7 +56,7 @@ bot.on("message", async message => {
     let earnings = new Discord.RichEmbed()
       .setDescription("__**LINKS**__")
       .setColor("#50f442")
-      .addField("How much can I earn with salad?","https://salad.zendesk.com/hc/en-us/articles/360028553551-How-much-can-I-earn-with-Salad-")
+      .addField("How much can I earn with Salad?","https://salad.zendesk.com/hc/en-us/articles/360028553551-How-much-can-I-earn-with-Salad-")
       .addField("How can I earn more with Salad?", "https://salad.zendesk.com/hc/en-us/articles/360028257792-How-much-electricity-does-Salad-use-")
       .addField("How does Salad mine cryptocurrency?", "https://salad.zendesk.com/hc/en-us/articles/360028478512-How-can-I-earn-more-with-Salad-");
 
