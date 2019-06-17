@@ -4,7 +4,7 @@
   "description": "Parsnip is our Discord bot which supports some user-friendly commands to answer our most frequently-asked questions.",
   "main": "index.js",
   "dependencies": {
-    "discord.js": "^11.5.0"
+    "discord.js": "^11.5.1"
   },
   "devDependencies": {},
   "scripts": {
