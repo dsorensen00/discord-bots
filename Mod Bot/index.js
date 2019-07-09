@@ -15,7 +15,7 @@ bot.on("ready", async () => {
 bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
-    let prefix = botconfig.prefix
+    let prefix = "#"
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];
     let args = messageArray.slice(1);
@@ -128,4 +128,4 @@ bot.on("message", async message => {
     }
 });
 
-bot.login(botconfig.token);
+bot.login("NTc1Njc2NzExMzAwMjM1Mjg0.XRyQ7w.FWWE-yz9m2brNhXIoTOEebrwt8E");
