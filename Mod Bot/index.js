@@ -5,9 +5,10 @@ const ms = require("ms");
 const fs = require("fs");
 
 
+
 bot.on("ready", async () => {
     console.log(`${bot.user.username} is online and protecting ${bot.guilds.size} servers!`);
-    bot.user.setActivity(`over the lil mods`, {type: "WATCHING"});
+    bot.user.setActivity(`to the conversations going on`, {type: "LISTENING"});
 
 
 });
@@ -15,7 +16,7 @@ bot.on("ready", async () => {
 bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
-    let prefix = "#"
+    let prefix = botconfig.prefix
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];
     let args = messageArray.slice(1);
@@ -97,7 +98,7 @@ bot.on("message", async message => {
           }
         }
         //end of create role
-        if(!mutetime) return message.reply("You didn't specify a time!");
+        if(!mutetime) return message.reply("You didn't specify a duration!");
         await(tomute.addRole(muterole.id));
         setTimeout(function(){
           tomute.removeRole(muterole.id);
@@ -128,4 +129,4 @@ bot.on("message", async message => {
     }
 });
 
-bot.login("NTc1Njc2NzExMzAwMjM1Mjg0.XRyQ7w.FWWE-yz9m2brNhXIoTOEebrwt8E");
+bot.login(botconfig.token);
