@@ -34,7 +34,7 @@ bot.on("message", async message => {
 
   if (cmd === `${prefix}international`) {
     let international = new Discord.RichEmbed()
-      .setDescription("Information you may need if you are not based in the   United Stats of America:")
+      .setDescription("Information you may need if you are not based in the United States of America:")
       .setColor("#50f442")
       .addField("__**Shipping**__", "Unfortunately, we cannot ship our rewards internationally yet.")
       .addField("__**Game Codes**__", "Most of our gift cards are for U.S. use only. Read the “checkout details” for region information.");
@@ -122,7 +122,7 @@ bot.on("message", async message => {
   }
 
   if (cmd === `${prefix}raid`){
-    message.channel.send("Hey chefs, apologies for the pings that you just received - we were raided and  someone (that being me) left the chef role pingable. I am incredibly sorry - and we're working on making sure this never happens again. The server got a little too big too fast, and we need to get it up to speed to make sure that this isn't even remotely possible in the future.\n\nAgain - I sincerely apologize. Feel free to ping me in #lobby and flood my dms in retribution for the massive amount of pings you got. I deserve it.");
+    message.channel.send("Hey chefs, apologies for the pings that you just received - we were raided and someone (that being me) left the chef role pingable. I am incredibly sorry - and we're working on making sure this never happens again. The server got a little too big too fast, and we need to get it up to speed to make sure that this isn't even remotely possible in the future.\n\nAgain - I sincerely apologize. Feel free to ping me in #lobby and flood my dms in retribution for the massive amount of pings you got. I deserve it.");
   }
 });
 
