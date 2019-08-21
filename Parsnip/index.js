@@ -9,6 +9,9 @@ bot.on("ready", async () => {
   bot.user.setActivity(`chefs chop salad`, {type: "WATCHING"});
 });
 
+sharetrackingmessage = "If your PC hasn't submitted a 'share' during a ten minute interval, you have not earned any money for that block of time. However, just because you're not submitting shares *now* doesn't mean you won't hit a lucky streak later.\n\nAcross time, **your average earnings should stabilize at our expected earning rates.** So if you see a big zero up at the top of your app, don't panic. It's most likely not a bug and you will start earning again eventually. This is just the semi-random nature of how cryptomining works.\n\n**If you think your issue is related to a bug and not share tracking,** please visit our FAQ resources, ask a friend for help on the server, or send us a bug report through Zendesk.";
+
+
 bot.on("message", async message => {
   if (message.author.bot) return;
   if (message.channel.type === "dm") return;
@@ -109,7 +112,9 @@ bot.on("message", async message => {
       .addField("__**#findgpu**__", "If you don't know your GPU's model, use this command to see a method on how to find that out!")
       .addField("__**#supportedgpus**__", "View what GPUs Salad supports!")
       .addField("__**#redeem**__", "Information on redeeming your gift cards!")
-      .addField("__**#logs**__", "Instructions on finding your log file!");
+      .addField("__**#logs**__", "Instructions on finding your log file!")
+      .addField("__**#share-tracking**__", "Read about share tracking!")
+      .addField("__**#no-earnings**__", "Read about the issue with no earnings!");
 
     return message.channel.send(help)
       .then(msg => {
@@ -123,6 +128,32 @@ bot.on("message", async message => {
 
   if (cmd === `${prefix}raid`){
     message.channel.send("Hey chefs, apologies for the pings that you just received - we were raided and  someone (that being me) left the chef role pingable. I am incredibly sorry - and we're working on making sure this never happens again. The server got a little too big too fast, and we need to get it up to speed to make sure that this isn't even remotely possible in the future.\n\nAgain - I sincerely apologize. Feel free to ping me in #lobby and flood my dms in retribution for the massive amount of pings you got. I deserve it.");
+  }
+
+  if (cmd === `${prefix}sharetracking`){
+    message.channel.send("");
+  }
+
+  if (cmd === `${prefix}no-earnings`){
+    let noearningsEmbed = new Discord.RichEmbed()
+    .setDescription("No Earnings")
+    .setColor("#50f442")
+    .addField("If your app displays a zero earning rate there are several potential bugs you may be experiencing:", "1. Your Antivirus may be blocking Salad or ethminer.exe\n2. Your Graphics Card drivers may be outdated")
+    .addField("These are fixable, and you can find solutions here:", "https://salad.zendesk.com/hc/en-us/categories/360001723991-Troubleshooting")
+    .addField("However, if this does not solve your issue then Share Tracking is likely causing the irregularity in your earnings. For more info on share tracking and how it impacts Salad users, either type ?sharetracking or read this helpful guide:", "https://medium.com/@saladchefs/the-salad-guide-to-cryptocurrency-share-tracking-ce97763edf6");
+    return message.channel.send(noearningsEmbed);
+  }
+  if (cmd === `${prefix}share-tracking`){
+    let sharetrackingEmbed = new Discord.RichEmbed()
+    .setDescription("Share Tracking")
+    .setColor("#50f442")
+    .addField("Share Tracking is a complicated subject, and we highly recommend users read our guide to how it works here:", "https://medium.com/@saladchefs/the-salad-guide-to-cryptocurrency-share-tracking-ce97763edf6")
+    .addField("Here's the TL;DR - ", "**Share Tracking is an accurate measure of your PC's earnings.**\n**Share Tracking makes Salad earnings appear more random.**")
+
+    return message.channel.send(sharetrackingEmbed)
+    .then(msg => {
+        message.channel.send(sharetrackingmessage);
+    })
   }
 });
 
