@@ -155,6 +155,17 @@ bot.on("message", async message => {
         message.channel.send(sharetrackingmessage);
     })
   }
+
+  if (cmd === `${prefix}canny`){
+    let cannyEmbed = new Discord.RichEmbed()
+    .setDescription("Canny Site")
+    .setColor("#50f442")
+    .addField("For help with bugs, please go to the Salad Technologies Canny site found here:", "__**Click the middle link beneath Bugs**__\nhttps://www.salad.io/support/")
+  }
+    return message.channel.send(cannyEmbed)
+    .then(msg => {
+      message.channel.send("This will take you to Canny, where you can log your bug, ask for help, upvote a bug you've experienced, and talk to Customer Support.");
+    })
 });
 
 bot.login(botconfig.token);
