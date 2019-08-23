@@ -1,5 +1,4 @@
 var Discord = require('discord.js');
-var auth = require('./auth.json');
 const fetch = require('node-fetch');
 require('http').createServer().listen(3000)
 require('dotenv').config()
@@ -11,7 +10,7 @@ var bot = new Discord.Client({
    autorun: true
 });  
 
-bot.login(auth.token);
+bot.login(process.env.TOKEN);
 
 bot.on("ready", async () => {
     await console.log(`${bot.user.username} is online and serving ${bot.guilds.size} servers!`);
